@@ -1,1 +1,1 @@
-# JS_Exercise-ProgrammerCollege
+# 【研修課題】プログラマカレッジで制作したJavaScriptの演習課題
