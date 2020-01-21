@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JS演習</title>
+  <!--  <link rel="stylesheet" href="JS演習.css">-->
+  <style>
+    .mg_r_50p {
+      margin-right: 50px;
+    }
+
+  </style>
+  <script src="JS演習.js"></script>
+  <!--  <script src="JS2.js"></script>-->
+
+  <!--
+  <script>
+    //   関数使用ver
+    /* row：行（縦）, col：列（横）, odd：奇数番目に入れる文字, even：偶数番目に入れる文字 */
+    function dotWrite(row, col, odd, even) {
+      for (let i = 1; i < row + 1; i++) {
+        for (let j = 1; j < col + 1; j++) {
+          if (j % 2 !== 0) {
+            document.write(odd);
+          } else {
+            document.write(even);
+          }
+        }
+        document.write("<br>");
+      }
+    }
+
+  </script>
+-->
+
+</head>
+
+<body>
+  <h1>JS演習</h1>
+  <main style="display: flex">
+     <p>右クリック→「検証」等でソースを確認</p> 
+
+    <!-- ★の出力：問1～8 -->
+    <!-- 出来るとこまで関数使用ver   不可 -->
+    <div class="mg_r_50p">
+      <h2>★の出力</h2>
+      <script>
+        //        let black = "★";
+        //        let white = "☆";
+        //        let args = "1, 5, " + black + ", " + white;
+        //        let args = "1, 5, '★', '★'";
+        //        let args = "1, 5, \'★\', \'★\'";
+        //        let args = '1, 5, \"★\", \"★\"';
+        //        let args = '1, 5, "★", "★"';
+        let args1 = [1, 5, "★", "★"];
+        let args2 = [2, 3, "★", "★"];
+        let args3 = [2, 5, "★", "★"];
+        let args4 = [4, 5, "★", "★"];
+        let args5 = [4, 3, "★", "★"];
+        let args6 = [3, 3, "★", "☆"];
+        let args7 = [4, 5, "★", "☆"];
+        for (let k = 1; k < 8; k++) {
+          document.write("<h3>");
+          document.write("■■■問" + k + "■■■");
+          document.write("</h3>");
+          document.write("<p>");
+          //          document.write(args);
+          //          dotWrite(args[0], args[1], args[2], args[3]);
+          //          dotWrite(args + i[0], args + i[1], args + i[2], args + i[3]);
+          //          dotWrite(args);
+          document.write("</p>");
+        }
+
+      </script>
+      <h3>■■■問8■■■</h3>
+      <p>左記参照。</p>
+    </div>
+
+    <!-- 関数使用ver -->
+    <div class="mg_r_50p">
+      <h2>★の出力</h2>
+      <h3>■■■問1■■■</h3>
+      <p>
+        <script>
+          dotWrite(1, 5, "★", "★");
+
+        </script>
+      </p>
+      <h3>■■■問2■■■</h3>
+      <p>
+        <script>
+          dotWrite(2, 3, "★", "★");
+
+        </script>
+      </p>
+      <h3>■■■問3■■■</h3>
+      <p>
+        <script>
+          dotWrite(2, 5, "☆", "☆");
+
+        </script>
+      </p>
+      <h3>■■■問4■■■</h3>
+      <p>
+        <script>
+          dotWrite(4, 5, "★", "★");
+
+        </script>
+      </p>
+      <h3>■■■問5■■■</h3>
+      <p>
+        <script>
+          dotWrite(4, 3, "★", "★");
+
+        </script>
+      </p>
+      <h3>■■■問6■■■</h3>
+      <p>
+        <script>
+          dotWrite(3, 3, "★", "☆");
+
+        </script>
+      </p>
+      <h3>■■■問7■■■</h3>
+      <p>
+        <script>
+          dotWrite(4, 5, "★", "☆");
+
+        </script>
+      </p>
+      <h3>■■■問8■■■</h3>
+      <p>左記参照。
+        <!--
+        <script>
+          dotWrite(5, 5, "★", "★");
+
+        </script>
+-->
+      </p>
+    </div>
+
+    <!-- scriptタグ内に直書きver -->
+    <div class="mg_r_50p">
+      <h2>★の出力</h2>
+      <h3>■■■問1■■■</h3>
+      <p>
+        <script>
+          for (let i = 0; i < 5; i++) {
+            document.write("★");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問2■■■</h3>
+      <p>
+        <script>
+          for (let i = 0; i < 2; i++) {
+            for (let j = 0; j < 3; j++) {
+              document.write("★");
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問3■■■</h3>
+      <p>
+        <script>
+          for (let i = 0; i < 2; i++) {
+            for (let j = 0; j < 5; j++) {
+              document.write("☆");
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問4■■■</h3>
+      <p>
+        <script>
+          for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 5; j++) {
+              document.write("★");
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問5■■■</h3>
+      <p>
+        <script>
+          for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 3; j++) {
+              document.write("★");
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問6■■■</h3>
+      <p>
+        <script>
+          for (let i = 1; i < 4; i++) {
+            for (let j = 1; j < 4; j++) {
+              if (j % 2 === 0) {
+                document.write("☆");
+              } else {
+                document.write("★");
+              }
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問7■■■</h3>
+      <p>
+        <script>
+          for (let i = 1; i < 5; i++) {
+            for (let j = 1; j < 6; j++) {
+              if (j % 2 === 0) {
+                document.write("☆");
+              } else {
+                document.write("★");
+              }
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+      <h3>■■■問8■■■</h3>
+      <p>
+        <script>
+          for (let i = 1; i < 6; i++) {
+            for (let j = 1; j <= i; j++) {
+              document.write("★");
+            }
+            document.write("<br>");
+          }
+
+        </script>
+      </p>
+    </div>
+
+    <!-- 関数 -->
+    <div>
+      <h2>関数</h2>
+      <h3>■■■問1■■■</h3>
+      <p>〇面積<br>
+        <script>
+          circle(5);
+          circle(7);
+          circle(10);
+
+        </script>
+      </p>
+      <h3>■■■問2■■■　scriptタグ内での関数呼び出しver</h3>
+      <!-- scriptタグ内での関数呼び出しver -->
+      <div>
+        <p>A グループの合計金額：
+          <script>
+            //          feeSum(1, 1);
+            feeSum(2, 4);
+
+          </script>円です。
+        </p>
+        <p>B グループの合計金額：
+          <script>
+            feeSum(1, 5);
+
+          </script>円です。
+        </p>
+        <p>C グループの合計金額：
+          <script>
+            feeSum(3, 7);
+
+          </script>円です。
+        </p>
+      </div>
+      <!-- spanタグ内への書き出しver   不可  解決 -->
+      <div>
+        <h3>■■■問2■■■　spanタグ内への書き出しver</h3>
+
+        <ul>
+          <li>A グループの合計金額：　<span id="aGroup"></span>円です。</li>
+          <li>B グループの合計金額：　<span id="bGroup"></span>円です。</li>
+          <li>C グループの合計金額：　<span id="cGroup"></span>円です。</li>
+        </ul>
+        <script>
+
+        </script>
+      </div>
+      <!-- グループ名を追加で書き出し -->
+      <div>
+        <h3>■■■問2■■■　グループ名を追加で書き出しver</h3>
+        <p>
+          <script>
+            feeSum_g("A", 2, 4);
+
+          </script>
+        </p>
+
+        <p>
+          <script>
+            feeSum_g("B", 1, 5);
+
+          </script>
+        </p>
+
+        <p>
+          <script>
+            feeSum_g("C", 3, 7);
+
+          </script>
+        </p>
+      </div>
+
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="JS2.js" async></script>
+</body>
+
+</html>
