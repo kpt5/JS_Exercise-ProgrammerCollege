@@ -1,4 +1,4 @@
-# 【研修課題】プログラマカレッジで制作したJavaScriptの演習
+# 【プログラマカレッジ研修課題】JavaScriptの演習
 　 https://kpt5.github.io/JS_Exercise-ProgrammerCollege/
   
 <br>　・関数・for文の利用
